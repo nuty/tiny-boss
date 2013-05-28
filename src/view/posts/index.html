@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <head>
+    <title>nutszzy</title>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+  </head>
+  <body id="page">
+    <div class="layout">
+        <a href="/">home</a>&nbsp;//&nbsp;
+        <a href="{% url action="posts_add" %}">add</a>&nbsp;//&nbsp;
+        <a href="{% url action="posts_list" %}">list</a>
+    </div>
+{% block body %}
+    <div id="content">
+      <h1>{{say}} Nutzzy!</h1>
+
+    {% if posts %}
+        <section>
+    {% for post in posts %}
+      <article>
+        <a id ="{{post.id}}" href="{% url action="post_detail" id=post.id %}"><h2>{{ post.title }}</h2></a>
+      </article>
+    {% endfor %}
+    {% else %}
+      <h1>Unbelievable. No posts so far.</h1>
+    {% endif %}
+  </section>
+    </div>
+  {% endblock %}
+  </body>
+</html>

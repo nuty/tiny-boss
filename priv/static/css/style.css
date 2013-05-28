@@ -1,0 +1,15 @@
+body { font: 16px/1.4 "Lucida Grande", "Lucida Sans Unicode", Lucida, Verdana, sans-serif; background: #B2DFEE; }
+h1 { color: #7A378B; }
+h2 { color: #969696}
+h1, h2 { font-family: "Georgia", "Palatino", serif; margin: 5; }
+h1 { border-bottom: 2px solid #eee; }
+h2 { font-size: 1.2em; }
+a {color:##7A378B;text-decoration:none;}
+#page #content { margin: 2em auto; width: 70em; border: 5px solid #40E0D0; padding: 0.8em; background: #fff; }
+#page #content nav { display: block; text-align: right; font-size: 0.8em; padding: 0.3em; margin-bottom: 1em; background: #fafafa; }
+#page #content form { font-size: 0.9em; border-bottom: 1px solid #ccc; margin-bottom: 0.8em; }
+#page #content label { font-weight: bold; color: #377ba8; }
+
+.flash { background: #cee5f5; padding: 0.5em; border: 1px solid #aacbe2; }
+.error { background: #f0d6d6; padding: 0.5em; }
+.layout { padding:0.3em;}

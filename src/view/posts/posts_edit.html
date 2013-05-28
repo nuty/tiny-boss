@@ -1,0 +1,16 @@
+{% extends "posts/index.html" %}
+{% block body %}
+<div class="layout">
+    <form action="{% url action="posts_edit" id=posts.id %}" method="post">
+      <p>
+        <label for="title">Title:</label><br />
+        <input type="text" size="50" name="title" value="{{ posts.title}}"/>
+      </p>
+      <p>
+        <label for="text">Body:</label><br />
+        <textarea name="body" rows="10" cols="48">{{ posts.body }}</textarea>
+      </p>
+      <p><input type="submit" value="Share" /></p>
+    </form>
+    </div>
+{% endblock %}

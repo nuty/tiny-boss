@@ -1,0 +1,14 @@
+{% extends "posts/index.html" %}
+{% block body %}
+<div class="layout">
+    <h1>{{  posts.title }}</h1>
+    <p>{{  posts.body }}</p>
+    <p>{{  posts.pic }}</p>
+    <p>{{  posts.url }}</p>
+    <p><img src="{{  posts.url }}"/></p>
+    <p><a href="{% url action="posts_del" id=posts.id %}">delete</a></p>
+    <p><a href="{% url action="posts_edit" id=posts.id %}">edit</a></p>
+    </div>
+{% endblock %}
+
+

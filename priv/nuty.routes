@@ -1,0 +1,35 @@
+% Routes file.
+
+% Formats: 
+%   {"/some/route", [{controller, "Controller"}, {action, "Action"}]}.
+%   {"/some/route", [{controller, "Controller"}, {action, "Action"}, {id, "42"}]}.
+%   {"/(some|any)/route/(\\d+)", [{controller, '$1'}, {action, "Action"}, {id, '$2'}]}.
+%   {"/some/route/(?<route_id>\\d+)", [{controller, "Controller"}, {action, "Action"}, {id, '$route_id'}]}.
+%   {"/some/route", [{application, some_app}, {controller, "Controller"}, {action, "Action"}, {id, "42"}]}.
+%
+%   {404, [{controller, "Controller"}, {action, "Action"}]}.
+%   {404, [{controller, "Controller"}, {action, "Action"}, {id, "42"}]}.
+%   {404, [{application, some_app}, {controller, "Controller"}, {action, "Action"}, {id, "42"}]}.
+%
+% Note that routing across applications results in a 302 redirect.
+
+% Front page
+% {"/", [{controller, "world"}, {action, "hello"}]}.
+
+% 404 File Not Found handler
+% {404, [{controller, "world"}, {action, "lost"}]}.
+
+% 500 Internal Error handler (only invoked in production)
+% {500, [{controller, "world"}, {action, "calamity"}]}.
+{"/", [{controller, "posts"}, {action, "index"}]}.
+
+{"/list", [{controller, "posts"}, {action,"posts_list"}]}.
+
+{"/add", [{controller, "posts"}, {action,"posts_add"}]}.
+
+{"/post/(?<id>\\d+)", [{controller, "posts"}, {action,"post_detail"}]}.
+
+{"/post/delete/(?<id>\\d+)", [{controller, "posts"}, {action,"post_del"}]}.
+
+{"/post/edit/(?<id>\\d+)", [{controller, "posts"}, {action,"post_edit"}]}.
+

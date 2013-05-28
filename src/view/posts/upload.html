@@ -1,0 +1,17 @@
+{% extends "posts/index.html" %}
+{% block body %}
+<div class="layout">
+    <form action="{% url action="upload" %}" method="post" enctype="multipart/form-data">
+      <p>
+        <label for="title">Title:</label><br />
+        <input type="text" size="50" name="title" />
+      </p>
+      <p>
+        <label for="text">Body:</label><br />
+        <textarea name="body" rows="10" cols="48"></textarea>
+      </p>
+      <p><input type="submit" value="Share" /></p>
+    </form>
+    </div>
+{% endblock %}
+
