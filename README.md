@@ -1,4 +1,4 @@
 tiny-boss
 =========
 
-a erlang framework chicagoboss demo
+erlang framework chicagoboss demo
